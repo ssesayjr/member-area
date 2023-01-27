@@ -1,45 +1,26 @@
 {
-  "name": "member-area",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
-  "env": {
-    "browser": true,
-    "node": true
-  },
-  "directories": {
-    "lib": "lib"
-  },
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "service-worker.js"
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ssesayjr/member-area.git"
+  "engines": {
+    "node": "16"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ssesayjr/member-area/issues"
-  },
-  "homepage": "https://github.com/ssesayjr/member-area#readme",
+  "main": "index.js",
   "dependencies": {
-    "@actions/core": "^1.10.0",
-    "@actions/github": "^5.1.1",
-    "package": "^1.0.1"
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.49.0",
-    "@typescript-eslint/parser": "^5.49.0",
-    "eslint": "^8.32.0",
-    "eslint-plugin-vue": "^9.9.0"
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
   },
-  "eslintConfig": {
-    "globals": {
-      "window": true,
-      "node": true
-    }
-  }
+  "private": true
 }
