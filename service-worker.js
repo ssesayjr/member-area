@@ -150,7 +150,7 @@ function setOfCachedUrls(cache) {
   });
 }
 
-window.addEventListener('install', function (event) {
+window.navigator.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(cacheName).then(function (cache) {
       return setOfCachedUrls(cache).then(function (cachedUrls) {
