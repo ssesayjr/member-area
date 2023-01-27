@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Service Worker Precache Test</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="canonical" href="https://ssesayjr.github.io/member-area/public" />
+    <link rel="canonical" href="https://ssesayjr.github.io/member-area/public/" />
 
     <link rel="manifest" href="/member-area/public/site.webmanifest">
   </head>
@@ -19,18 +19,18 @@
   
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/member-area/public/service-worker.js', {scope: '/member-area/public/'});
+    navigator.serviceWorker.register('/member-area/public/service-worker.js', {scope: '/member-area/'});
     });
 }
     </script>
-      <script src="public/js/config/config.js"></script>
-      <script src="public/js/authState.js"></script>
-      <script src="public/js/login.js"></script>
-      <script src="public/js/logout.js"></script>
-      <script src="public/js/notification.js"></script>
-      <script src="public/js/register.js"></script>
-      <script src="public/js/sendVerification.js"></script>
-      <script src="public/lib/noty/noty.js"></script>
+      <script src="js/config/config.js"></script>
+      <script src="js/authState.js"></script>
+      <script src="js/login.js"></script>
+      <script src="js/logout.js"></script>
+      <script src="js/notification.js"></script>
+      <script src="js/register.js"></script>
+      <script src="js/sendVerification.js"></script>
+      <script src="lib/noty/noty.js"></script>
 
 
 
