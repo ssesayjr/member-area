@@ -6,12 +6,12 @@
   "env": {
     "browser": true,
     "node": true
-},
+  },
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", 
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "service-worker.js"
   },
   "repository": {
@@ -27,7 +27,8 @@
   "homepage": "https://github.com/ssesayjr/member-area#readme",
   "dependencies": {
     "@actions/core": "^1.10.0",
-    "@actions/github": "^5.1.1"
+    "@actions/github": "^5.1.1",
+    "package": "^1.0.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.49.0",
@@ -38,7 +39,7 @@
   "eslintConfig": {
     "globals": {
       "window": true,
-      "node" : true
+      "node": true
     }
   }
 }
