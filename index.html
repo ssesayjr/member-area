@@ -19,11 +19,20 @@
   
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-    navigator.serviceWorker.register('service-worker.js');
+    navigator.serviceWorker.register('service-worker.js', {scope: './'});
     });
 }
     </script>
+      <script src="js/config/config.js"></script>
+      <script src="js/authState.js"></script>
       <script src="js/login.js"></script>
+      <script src="js/logout.js"></script>
+      <script src="js/notification.js"></script>
+      <script src="js/register.js"></script>
+      <script src="js/sendVerification.js"></script>
+      <script src="lib/noty/noty.js"></script>
+
+
 
   </body>
 </html>
