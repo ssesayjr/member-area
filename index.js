@@ -360,7 +360,7 @@ imageButtonElement.addEventListener('click', function (e) {
 mediaCaptureElement.addEventListener('change', onMediaFileSelected);
 
 
-var firebaseConfig = {
+var firebaseConfigB = {
   apiKey: "AIzaSyDSx2SZM_p34N1wiS7Cf4JlsjMxedFE2No",
   authDomain: "member-area-t4e.firebaseapp.com",
   databaseURL: "https://member-area-t4e-default-rtdb.firebaseio.com",
@@ -374,22 +374,21 @@ var firebaseConfig = {
 
 
 
-var functions = require("firebase-functions");
 
-export function getFirebaseConfig() {
-  if (!firebaseConfig|| !firebaseConfig.apiKey) {
+export function getFirebaseConfigB() {
+  if (!firebaseConfigB|| !firebaseConfigB.apiKey) {
     throw new Error('No Firebase configuration object provided.' + '\n' +
     'Add your web app\'s configuration object to firebase-config.js');
   } else {
-    return firebaseConfig;
+    return firebaseConfigB;
   }
 };
 
 
-var firebaseAppConfig = getFirebaseConfig();
+var firebaseAppConfig = getFirebaseConfigB();
 // TODO 0: Initialize Firebase
 
 // TODO 12: Initialize Firebase Performance Monitoring
 
-initFirebaseAuth();
+initFirebaseAuth(firebaseAppConfig);
 loadMessages();
