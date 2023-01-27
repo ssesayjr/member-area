@@ -4,7 +4,7 @@ name: service-worker-push
     push:
       branches:
         - service-worker
-    build-node: 
+    build: 
       runs-on: ubuntu-latest
       containter: node:16
       steps: 
