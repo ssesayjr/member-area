@@ -1,6 +1,6 @@
 name: service-worker-push
 'on':
- 
+
     push:
       branches:
         - service-worker
@@ -12,5 +12,6 @@ name: service-worker-push
         - run: npm --version
         - uses: actions/checkout@v3
         - run: npm install 
+        - run: npm install node
         - run: npm ci && npm run build
         - run: node service-worker.js
