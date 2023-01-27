@@ -1,5 +1,8 @@
-on: push 
+name: service-worker-push
 jobs: 
+  push:
+    branches:
+      - service-worker
   build-node: 
     runs-on: ubuntu-latest
     containter: node:16
