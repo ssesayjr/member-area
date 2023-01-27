@@ -28,7 +28,9 @@
   "dependencies": {
     "@actions/core": "^1.10.0",
     "@actions/github": "^5.1.1",
-    "package": "^1.0.1"
+    "package": "^1.0.1",
+    "firebase": "^9.0.0"
+    
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.49.0",

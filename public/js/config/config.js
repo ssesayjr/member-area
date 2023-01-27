@@ -4,15 +4,6 @@
  * @license MIT
  */
 
-
-
-// Import the functions you need from the SDKs you need
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 var firebaseConfig = {
   apiKey: "AIzaSyDSx2SZM_p34N1wiS7Cf4JlsjMxedFE2No",
   authDomain: "member-area-t4e.firebaseapp.com",
@@ -25,16 +16,4 @@ var firebaseConfig = {
 };
 
 
-export function getFirebaseConfig() {
-  if (!firebaseConfig || !firebaseConfig.apiKey) {
-    throw new Error('No Firebase configuration object provided.' + '\n' +
-    'Add your web app\'s configuration object to firebase-config.js');
-  } else {
-    return firebaseConfig;
-  }
-}
-
-
-
-// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
