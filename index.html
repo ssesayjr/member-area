@@ -9,29 +9,12 @@
   </head>
 
   <body>
-    <p>
-      This is a live demo illustrating the use of the
-      <a href="https://github.com/googlechrome/sw-precache"><code>sw-precache</code></a>
-      library to make a site's content available offline via service workers.
-    </p>
 
-    <p>Check out <code>chrome://serviceworker-internals</code> for info on what's being cached.</p>
+    <h1>GitHub page as PWA template</h1>
 
-    <p>Here's a precached image:</p>
-    <img src="images/one.png">
-
-    <p>
-      Try stopping the local web server (if you're accessing the <code>dist</code> version of this
-      site via <code>localhost</code>) and disabling your network connection,
-      and then visit <a href="images/two.png?utm_source=dummy">images/two.png</a>.
-      Since it was precached, it should still load.
-    </p>
-
-    <div>
-      <button id="clear-cache">Clear Cache</button>
-    </div>
-
-    <script src="js/service-worker-registration.js"></script>
+    <script src="service-worker-registration.js"></script>
+    
+    
     <script>
       function sendMessage(message) {
         return new Promise(function(resolve, reject) {
