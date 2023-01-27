@@ -1,14 +1,16 @@
 name: service-worker-push
-jobs: 
-  push:
-    branches:
-      - service-worker
-  build-node: 
-    runs-on: ubuntu-latest
-    containter: node:16
-    steps: 
-      - run: node --version
-      - run: npm --version
-      - uses: actions/checkout@v3
-      - run: npm install
-      - run: node service-worker.js
+'on':
+  jobs: 
+    push:
+      branches:
+        - service-worker
+    build-node: 
+      runs-on: ubuntu-latest
+      containter: node:16
+      steps: 
+        - run: node --version
+        - run: npm --version
+        - uses: actions/checkout@v3
+        - run: npm install 
+        - run: npm ci && npm run build
+        - run: node service-worker.js
