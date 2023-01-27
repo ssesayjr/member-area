@@ -13,13 +13,12 @@
 
     <h1>GitHub page as PWA template</h1>
 
-    <script src="service-worker-registration.js"></script>
     
     
     <script>
     if (navigator.serviceWorker) {
         navigator.serviceWorker.register (
-          '/member-area/service-worker-registration.js',
+          '/member-area/service-worker.js',
           {scope: './'}
         )
       }
