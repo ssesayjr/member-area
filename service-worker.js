@@ -134,7 +134,7 @@ var urlsToCacheKeys = new Map(
   precacheConfig.map(function (item) {
     var relativeUrl = item[0];
     var hash = item[1];
-    var absoluteUrl = new URL(relativeUrl, window.location);
+    var absoluteUrl = new URL(relativeUrl, window.location.href);
     var cacheKey = createCacheKey(absoluteUrl, hashParamName, hash, false);
     return [absoluteUrl.toString(), cacheKey];
   })
@@ -234,7 +234,7 @@ this.addEventListener('fetch', function (event) {
       navigateFallback &&
       (event.request.mode === 'navigate') &&
       isPathWhitelisted([], event.request.url)) {
-      url = new URL(navigateFallback, window.location).toString();
+      url = new URL(navigateFallback, window.location.href).toString();
       shouldRespond = urlsToCacheKeys.has(url);
     }
 
