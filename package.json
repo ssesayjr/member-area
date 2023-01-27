@@ -29,5 +29,10 @@
     "@typescript-eslint/parser": "^5.49.0",
     "eslint": "^8.32.0",
     "eslint-plugin-vue": "^9.9.0"
+  },
+  "eslintConfig": {
+    "globals": {
+      "window": true
+    }
   }
 }
