@@ -134,7 +134,7 @@ var urlsToCacheKeys = new Map(
   precacheConfig.map(function (item) {
     var relativeUrl = item[0];
     var hash = item[1];
-    var absoluteUrl = new URL(relativeUrl, window.location.pathname);
+    var absoluteUrl = new URL(relativeUrl, this.location.pathname);
     var cacheKey = createCacheKey(absoluteUrl, hashParamName, hash, false);
     return [absoluteUrl.toString(), cacheKey];
   })
