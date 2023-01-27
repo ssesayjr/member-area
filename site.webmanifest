@@ -2,7 +2,7 @@
     "short_name": "FireLogin",
     "name": "FireLogin",
     "start_url": "/member-area/",
-    "scope" : "./",
+    "scope" : "/member-area/",
     "icons": [
         {
             "src": "/favicons/android-chrome-192x192.png",
