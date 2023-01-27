@@ -54,7 +54,7 @@ var addDirectoryIndex = function (originalUrl, index) {
 };
 
 var cleanResponse = function (originalResponse) {
-  // If self is not a redirected response, then we don't have to do anything.
+  // If this is not a redirected response, then we don't have to do anything.
   if (!originalResponse.redirected) {
     return Promise.resolve(originalResponse);
   }
@@ -150,7 +150,7 @@ function setOfCachedUrls(cache) {
   });
 }
 
-this.addEventListener('install', function (event) {
+self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(cacheName).then(function (cache) {
       return setOfCachedUrls(cache).then(function (cachedUrls) {
@@ -178,13 +178,13 @@ this.addEventListener('install', function (event) {
     }).then(function () {
 
       // Force the SW to transition from installing -> active state
-      return this.skipWaiting();
+      return self.skipWaiting();
 
     })
   );
 });
 
-this.addEventListener('activate', function (event) {
+self.addEventListener('activate', function (event) {
   var setOfExpectedUrls = new Set(urlsToCacheKeys.values());
 
   event.waitUntil(
@@ -200,14 +200,14 @@ this.addEventListener('activate', function (event) {
       });
     }).then(function () {
 
-      return this.clients.claim();
+      return self.clients.claim();
 
     })
   );
 });
 
 
-this.addEventListener('fetch', function (event) {
+self.addEventListener('fetch', function (event) {
   if (event.request.method === 'GET') {
     // Should we call event.respondWith() inside this fetch event handler?
     // This needs to be determined synchronously, which will give other fetch
@@ -259,7 +259,6 @@ this.addEventListener('fetch', function (event) {
     }
   }
 });
-
 
 
 
