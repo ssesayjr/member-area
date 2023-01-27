@@ -234,7 +234,7 @@ this.addEventListener('fetch', function (event) {
       navigateFallback &&
       (event.request.mode === 'navigate') &&
       isPathWhitelisted([], event.request.url)) {
-      url = new URL(navigateFallback, window.location.origin).toString();
+      url = new URL(navigateFallback, 'https://ssesayjr.github.io/member-area').toString();
       shouldRespond = urlsToCacheKeys.has(url);
     }
 
