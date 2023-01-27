@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Service Worker Precache Test</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="canonical" href="https://ssesayjr.github.io/member-area/" />
 
-    <link rel="site" href="site.webmanifest">
+    <link rel="manifest" href="site.webmanifest">
   </head>
 
   <body>
@@ -17,10 +17,11 @@
     
     <script>
   
-        if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js');
-            }
-      
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js');
+    });
+}
     </script>
   </body>
 </html>
