@@ -1,6 +1,6 @@
 name: service-worker-push
 'on':
-  jobs: 
+ 
     push:
       branches:
         - service-worker
