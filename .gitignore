@@ -67,3 +67,6 @@ node_modules/
 
 #package lock file 
 package-lock.json
+
+#node modules 
+./node_modules
