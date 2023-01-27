@@ -382,7 +382,7 @@ export function getFirebaseConfigB() {
   } else {
     return firebaseConfigB;
   }
-};
+}
 
 
 var firebaseAppConfig = getFirebaseConfigB();

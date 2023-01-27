@@ -18,4 +18,4 @@ var firebaseConfig = {
 };
 
 
-initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
