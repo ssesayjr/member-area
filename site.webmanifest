@@ -1,4 +1,6 @@
 {
+    "short_name": "FireLogin",
+    "name": "FireLogin",
     "start_url": "index.html?utm_source=homescreen",
     "scope" : "./",
     "icons": [
