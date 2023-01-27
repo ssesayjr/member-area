@@ -134,7 +134,7 @@ var urlsToCacheKeys = new Map(
   precacheConfig.map(function (item) {
     var relativeUrl = item[0];
     var hash = item[1];
-    var absoluteUrl = new URL(relativeUrl, window.location.origin);
+    var absoluteUrl = new URL(relativeUrl, 'https://ssesayjr.github.io/member-area/');
     var cacheKey = createCacheKey(absoluteUrl, hashParamName, hash, false);
     return [absoluteUrl.toString(), cacheKey];
   })
@@ -150,7 +150,7 @@ function setOfCachedUrls(cache) {
   });
 }
 
-this.addEventListener('install', function (event) {
+self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(cacheName).then(function (cache) {
       return setOfCachedUrls(cache).then(function (cachedUrls) {
@@ -234,7 +234,7 @@ this.addEventListener('fetch', function (event) {
       navigateFallback &&
       (event.request.mode === 'navigate') &&
       isPathWhitelisted([], event.request.url)) {
-      url = new URL(navigateFallback, window.location.origin).toString();
+      url = new URL(navigateFallback, 'https://ssesayjr.github.io/member-area/').toString();
       shouldRespond = urlsToCacheKeys.has(url);
     }
 
