@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <title>Service Worker Precache Test</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="canonical" href="https://ssesayjr.github.io/member-area/" />
+    <link rel="canonical" href="https://ssesayjr.github.io/member-area" />
 
-    <link rel="site" href="/member-area/site.webmanifest">
+    <link rel="site" href="/site.webmanifest">
   </head>
 
   <body>
@@ -16,12 +16,11 @@
     
     
     <script>
-    if (navigator.serviceWorker) {
-        navigator.serviceWorker.register (
-          '/member-area/service-worker.js',
-          {scope: './'}
-        )
-      }
+  
+        if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js');
+            }
+      
     </script>
   </body>
 </html>
