@@ -134,7 +134,7 @@ var urlsToCacheKeys = new Map(
   precacheConfig.map(function (item) {
     var relativeUrl = item[0];
     var hash = item[1];
-    var absoluteUrl = new URL(relativeUrl, self.location);
+    var absoluteUrl = new URL(relativeUrl, this.location);
     var cacheKey = createCacheKey(absoluteUrl, hashParamName, hash, false);
     return [absoluteUrl.toString(), cacheKey];
   })
@@ -150,7 +150,7 @@ function setOfCachedUrls(cache) {
   });
 }
 
-self.addEventListener('install', function (event) {
+this.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(cacheName).then(function (cache) {
       return setOfCachedUrls(cache).then(function (cachedUrls) {
@@ -178,13 +178,13 @@ self.addEventListener('install', function (event) {
     }).then(function () {
 
       // Force the SW to transition from installing -> active state
-      return self.skipWaiting();
+      return this.skipWaiting();
 
     })
   );
 });
 
-self.addEventListener('activate', function (event) {
+this.addEventListener('activate', function (event) {
   var setOfExpectedUrls = new Set(urlsToCacheKeys.values());
 
   event.waitUntil(
@@ -200,14 +200,14 @@ self.addEventListener('activate', function (event) {
       });
     }).then(function () {
 
-      return self.clients.claim();
+      return this.clients.claim();
 
     })
   );
 });
 
 
-self.addEventListener('fetch', function (event) {
+this.addEventListener('fetch', function (event) {
   if (event.request.method === 'GET') {
     // Should we call event.respondWith() inside this fetch event handler?
     // This needs to be determined synchronously, which will give other fetch
@@ -234,7 +234,7 @@ self.addEventListener('fetch', function (event) {
       navigateFallback &&
       (event.request.mode === 'navigate') &&
       isPathWhitelisted([], event.request.url)) {
-      url = new URL(navigateFallback, self.location).toString();
+      url = new URL(navigateFallback, this.location).toString();
       shouldRespond = urlsToCacheKeys.has(url);
     }
 
