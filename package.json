@@ -2,7 +2,7 @@
   "name": "member-area",
   "version": "1.0.0",
   "description": "",
-  "main": "service-worker-registration.js",
+  "main": "site.webmanifest",
   "env": {
     "browser": true,
     "node": true
