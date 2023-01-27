@@ -1,0 +1,23 @@
+{
+  "name": "member-area",
+  "version": "1.0.0",
+  "description": "",
+  "main": "service-worker.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssesayjr/member-area.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssesayjr/member-area/issues"
+  },
+  "homepage": "https://github.com/ssesayjr/member-area#readme"
+}
