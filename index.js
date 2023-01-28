@@ -373,7 +373,7 @@ var firebaseConfigB = {
 
 
 
-import {getFirebaseConfig} from "./public/js/config"
+import {getFirebaseConfig} from "./public/js/config";
 import { constants } from 'buffer';
 
 
