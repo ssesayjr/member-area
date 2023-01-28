@@ -2,7 +2,7 @@
   "name": "member-area",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "/public/index.html",
   "env": {
     "browser": true,
     "node": true
@@ -13,6 +13,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "service-worker.js"
+
   },
   "repository": {
     "type": "git",
