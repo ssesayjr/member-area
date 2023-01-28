@@ -1,0 +1,40 @@
+{
+  "name": "member-area",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/public/index.html",
+  "type": "module",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssesayjr/member-area.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssesayjr/member-area/public/index.html"
+  },
+  "homepage": "https://github.com/ssesayjr/member-area/public/index.html",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "package": "^1.0.1",
+    "firebase": "^9.0.0"
+    
+  },
+  "devDependencies": {
+
+    "firebase": "^9.0.0"
+
+  }
+}
