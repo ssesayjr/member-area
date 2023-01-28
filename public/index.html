@@ -7,10 +7,7 @@
     <link rel="canonical" href="https://ssesayjr.github.io/member-area/public/" />
     <link rel="manifest" href="site.webmanifest">
 
-    <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-firestore.js"></script>
-
+    
   </head>
 
   <body>
@@ -35,20 +32,41 @@
         Logout
       </button>
   </div>
-    
+
     <script>
-        document.getElementById("login").addEventListener("click", /js/login.js);
-        document.getElementById("login").addEventListener("click", /js/authState.js);
-        document.getElementById("register").addEventListener("click", /js/register.js);
-        document.getElementById("logout").addEventListener("click", /js/logout.js);
 
+  document.getElementById("login").addEventListener("click", function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "js/login.js."; 
+    document.getElementsByTagName("head")[0].appendChild(script);
+    return false;
 
+  });
+  document.getElementById("login").addEventListener("click", function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "js/authState.js."; 
+    document.getElementsByTagName("head")[0].appendChild(script);
+    return false;
 
-    </script>
+  });
+  document.getElementById("register").addEventListener("click", function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "js/register.js."; 
+    document.getElementsByTagName("head")[0].appendChild(script);
+    return false;
 
+  });
+  document.getElementById("logout").addEventListener("click", function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "js/logout.js."; 
+    document.getElementsByTagName("head")[0].appendChild(script);
+    return false;
 
-    
-    <script>
+  });
   
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
@@ -56,7 +74,16 @@
     });
 }
 
+
+
     </script>
+
+
+<script src="/__/firebase/9.16.0/firebase-app-compat.js"></script>
+<script src="/__/firebase/9.16.0/firebase-auth-compat.js"></script>
+
+    <!-- include only the Firebase features as you need -->
+
       <script src="js/config/config.js"></script>
       <script src="js/authState.js"></script>
       <script src="js/login.js"></script>

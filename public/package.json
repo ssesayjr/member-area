@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "/public/index.html",
+  "type": "module",
   "env": {
     "browser": true,
     "node": true

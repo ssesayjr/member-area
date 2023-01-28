@@ -5,6 +5,7 @@
  */
 
 
+
 var firebaseConfig = {
   apiKey: "AIzaSyDSx2SZM_p34N1wiS7Cf4JlsjMxedFE2No",
   authDomain: "member-area-t4e.firebaseapp.com",
@@ -16,11 +17,4 @@ var firebaseConfig = {
   measurementId: "G-FP33DCC1ZL"
 };
 
-function getFirebaseConfig(firebaseConfig) {
-  if (!firebaseConfig|| !firebaseConfig.apiKey) {
-    throw new Error('No Firebase configuration object provided.' + '\n' +
-    'Add your web app\'s configuration object to firebase-config.js');
-  } else {
-    return firebase.initializeApp(firebaseConfig);;
-  }
-}
+firebase.initializeApp(firebaseConfig);
