@@ -5,8 +5,12 @@
     <title>Service Worker Precache Test</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="canonical" href="https://ssesayjr.github.io/member-area/public/" />
-
     <link rel="manifest" href="site.webmanifest">
+
+    <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-firestore.js"></script>
+
   </head>
 
   <body>
@@ -19,25 +23,36 @@
   
       <input id="password_field" class="login-box.user-box input" placeholder="Password">
   
-      <button id="login" class="button .login-box">
-          Login
+      <button id="login" class=".login-box">
+          Login 
       </button>
-  
+
       <button id="register" class="button">
           Registrieren
       </button>
   
       <button id="logout" class="button">
-          Logout
+        Logout
       </button>
   </div>
     
+    <script>
+        document.getElementById("login").addEventListener("click", /js/login.js);
+        document.getElementById("login").addEventListener("click", /js/authState.js);
+        document.getElementById("register").addEventListener("click", /js/register.js);
+        document.getElementById("logout").addEventListener("click", /js/logout.js);
+
+
+
+    </script>
+
+
     
     <script>
   
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-    navigator.serviceWorker.register('service-worker.js', {scope: '/.'});
+    navigator.serviceWorker.register('service-worker.js', registration.scope);
     });
 }
 
@@ -51,11 +66,6 @@
       <script src="js/sendVerification.js"></script>
       <script src="lib/noty/noty.js"></script>
       <script src="service-worker.js"></script>
-
-
-
-  </body>
-</html><script src="service-worker.js"></script>
 
 
 

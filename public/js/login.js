@@ -4,7 +4,7 @@
  * @license MIT
  */
 
-let globalEmail = "samuel.sesay.jr@gmail.com";
+let globalEmail = "";
 
 function login() {
   console.log('Attempting to login user ...')
