@@ -373,22 +373,14 @@ var firebaseConfigB = {
 
 
 
+import {getFirebaseConfig} from "./public/js/config"
+import { constants } from 'buffer';
 
 
-export function getFirebaseConfigB() {
-  if (!firebaseConfigB|| !firebaseConfigB.apiKey) {
-    throw new Error('No Firebase configuration object provided.' + '\n' +
-    'Add your web app\'s configuration object to firebase-config.js');
-  } else {
-    return firebaseConfigB;
-  }
-}
-
-
-var firebaseAppConfig = getFirebaseConfigB();
+const app= getFirebaseConfig();
 // TODO 0: Initialize Firebase
-
+const auth=getAuth(app);
 // TODO 12: Initialize Firebase Performance Monitoring
+const firestore = getFirestore(app);
 
-initFirebaseAuth(firebaseAppConfig);
 loadMessages();

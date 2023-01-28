@@ -17,5 +17,11 @@ var firebaseConfig = {
   measurementId: "G-FP33DCC1ZL"
 };
 
-
-firebase.initializeApp(firebaseConfig);
+function getFirebaseConfig() {
+  if (!firebaseConfig|| !firebaseConfig.apiKey) {
+    throw new Error('No Firebase configuration object provided.' + '\n' +
+    'Add your web app\'s configuration object to firebase-config.js');
+  } else {
+    return firebase.initializeApp(firebaseConfig);;
+  }
+}
