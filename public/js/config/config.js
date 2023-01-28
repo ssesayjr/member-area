@@ -17,7 +17,7 @@ var firebaseConfig = {
   measurementId: "G-FP33DCC1ZL"
 };
 
-function getFirebaseConfig() {
+function getFirebaseConfig(firebaseConfig) {
   if (!firebaseConfig|| !firebaseConfig.apiKey) {
     throw new Error('No Firebase configuration object provided.' + '\n' +
     'Add your web app\'s configuration object to firebase-config.js');
