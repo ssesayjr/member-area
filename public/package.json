@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "/public/index.html",
+  "type": "module",
   "env": {
     "browser": true,
     "node": true
@@ -11,9 +12,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "service-worker.js"
-
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -23,9 +22,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ssesayjr/member-area/issues"
+    "url": "https://github.com/ssesayjr/member-area/public/index.html"
   },
-  "homepage": "https://github.com/ssesayjr/member-area#readme",
+  "homepage": "https://github.com/ssesayjr/member-area/public/index.html",
   "dependencies": {
     "@actions/core": "^1.10.0",
     "@actions/github": "^5.1.1",
