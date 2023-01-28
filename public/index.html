@@ -12,7 +12,23 @@
   <body>
 
     <h1>GitHub page as PWA template</h1>
-
+    <div class="container">
+      <input id="emailField" type="email" placeholder="Email">
+  
+      <input id="passwordField" type="password" placeholder="Passwort">
+  
+      <button id="btnLogin" class="login-box.user-box">
+          Login
+      </button>
+  
+      <button id="btnSignUp" class="btn btn-action">
+          Registrieren
+      </button>
+  
+      <button id="btnLogout" class="btn btn-action hide">
+          Logout
+      </button>
+  </div>
     
     
     <script>
@@ -39,6 +55,7 @@ document.querySelector('#show').addEventListener('click', () => {
       <script src="js/register.js"></script>
       <script src="js/sendVerification.js"></script>
       <script src="lib/noty/noty.js"></script>
+      <script src="service-worker-registration.js"></script>
 
 
 
