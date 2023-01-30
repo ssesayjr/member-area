@@ -4,6 +4,9 @@
  * @license MIT
  */
 
+import { } from 'https://www.gstatic.com/firebasejs/9.16.0/firebase.js'
+import { } from 'https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js'
+
 function registration() {
   console.log('Attempting to register user ...')
   var user_email = document.getElementById("user_email").value;

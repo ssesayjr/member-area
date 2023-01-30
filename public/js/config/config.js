@@ -5,7 +5,6 @@
  */
 
 
-
 var firebaseConfig = {
   apiKey: "AIzaSyDSx2SZM_p34N1wiS7Cf4JlsjMxedFE2No",
   authDomain: "member-area-t4e.firebaseapp.com",
